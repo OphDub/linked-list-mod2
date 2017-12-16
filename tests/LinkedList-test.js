@@ -18,7 +18,7 @@ describe('LINKED LIST', () => {
   });
 
   describe('UNSHIFT', () => {
-    it.skip('should add items to front of list / head', () => {
+    it('should add items to front of list / head', () => {
       list.unshift('duck');
       expect(list.length).to.equal(1)
       expect(list.head.data).to.equal('duck')
@@ -31,13 +31,13 @@ describe('LINKED LIST', () => {
   })
 
   describe('SHIFT', () => {
-    it.skip('should return null if nothing in the list', () => {
+    it('should return null if nothing in the list', () => {
       let result = list.shift();
 
       expect(result).to.equal(null)
     })
 
-    it.skip('should return the first item in the list', () => {
+    it('should return the first item in the list', () => {
       list.unshift('duck');
 
       expect(list.head.data).to.equal('duck');
@@ -47,7 +47,7 @@ describe('LINKED LIST', () => {
       expect(result.data).to.equal('duck');
     })
 
-    it.skip('should remove items from the front of list / head', () => {
+    it('should remove items from the front of list / head', () => {
 
       list.unshift('duck');
       list.unshift('goose');
@@ -55,7 +55,7 @@ describe('LINKED LIST', () => {
       expect(list.head.next.data).to.equal('duck');
 
       // remove goose from list
-      result = list.shift();
+      let result = list.shift();
       expect(result.data).to.equal('goose')
 
       // duck should now be back at the start of the list
@@ -72,24 +72,24 @@ describe('LINKED LIST', () => {
   })
 
   describe('PUSH', () => {
-    it.skip('should push a single element to a list', () => {
+    it.only('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
     });
 
-    it.skip('should increment the length of the list', () => {
+    it.only('should increment the length of the list', () => {
       list.push('duck');
       expect(list.length).to.eq(1);
     });
 
-    it.skip('should increment the length count', () => {
+    it.only('should increment the length count', () => {
       list.push('duck');
       list.push('goose');
       list.push('swan');
       expect(list.length).to.eq(3);
     });
 
-    it.skip('should assign the head to the first element pushed', () => {
+    it.only('should assign the head to the first element pushed', () => {
       expect(list.head).to.eq(null);
 
       list.push('duck');
@@ -99,14 +99,14 @@ describe('LINKED LIST', () => {
       expect(list.head.data).to.eq('duck');
     });
 
-    it.skip('should attach the second element to the first element', () => {
+    it.only('should attach the second element to the first element', () => {
       list.push('duck');
       list.push('swan');
       expect(list.head.data).to.eq('duck');
       expect(list.head.next.data).to.eq('swan');
     });
 
-    it.skip('should attach nexts in sequential order', () => {
+    it.only('should attach nexts in sequential order', () => {
       list.push('duck');
       list.push('goose');
       list.push('swan');
