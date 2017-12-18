@@ -72,24 +72,24 @@ describe('LINKED LIST', () => {
   })
 
   describe('PUSH', () => {
-    it.only('should push a single element to a list', () => {
+    it('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
     });
 
-    it.only('should increment the length of the list', () => {
+    it('should increment the length of the list', () => {
       list.push('duck');
       expect(list.length).to.eq(1);
     });
 
-    it.only('should increment the length count', () => {
+    it('should increment the length count', () => {
       list.push('duck');
       list.push('goose');
       list.push('swan');
       expect(list.length).to.eq(3);
     });
 
-    it.only('should assign the head to the first element pushed', () => {
+    it('should assign the head to the first element pushed', () => {
       expect(list.head).to.eq(null);
 
       list.push('duck');
@@ -99,14 +99,14 @@ describe('LINKED LIST', () => {
       expect(list.head.data).to.eq('duck');
     });
 
-    it.only('should attach the second element to the first element', () => {
+    it('should attach the second element to the first element', () => {
       list.push('duck');
       list.push('swan');
       expect(list.head.data).to.eq('duck');
       expect(list.head.next.data).to.eq('swan');
     });
 
-    it.only('should attach nexts in sequential order', () => {
+    it('should attach nexts in sequential order', () => {
       list.push('duck');
       list.push('goose');
       list.push('swan');
@@ -119,17 +119,17 @@ describe('LINKED LIST', () => {
   });
 
   describe('POP', () => {
-    it.skip('should return null if nothing in list', () => {
+    it('should return null if nothing in list', () => {
       expect(list.length).to.eq(0);
       expect(list.pop()).to.eq(null);
     });
 
-    it.skip('should not decrement the length if there are no nodes', () => {
+    it('should not decrement the length if there are no nodes', () => {
       list.pop()
       expect(list.length).to.eq(0);
     });
 
-    it.skip('should change the length', () => {
+    it('should change the length', () => {
       list.push('duck');
 
       expect(list.length).to.eq(1)
@@ -139,21 +139,21 @@ describe('LINKED LIST', () => {
       expect(list.length).to.eq(0);
     });
 
-    it.skip('should set the list head to null', () => {
+    it('should set the list head to null', () => {
       list.push('duck');
       let result = list.pop();
 
       expect(list.head).to.eq(null);
     });
 
-    it.skip('should return the last element', () => {
+    it('should return the last element', () => {
       list.push('duck');
       const result = list.pop();
 
       expect(result.data).to.eq('duck');
     });
 
-    it.skip('should return the last element from the list', () => {
+    it('should return the last element from the list', () => {
       list.push("duck");
       list.push("goose");
       list.push("swan");
@@ -163,7 +163,7 @@ describe('LINKED LIST', () => {
       expect(output.data).to.eq('southern screamer');
     });
 
-    it.skip('should remove the last element from the list', () => {
+    it('should remove the last element from the list', () => {
         list.push("duck");
         list.push("goose");
         list.push("swan");
