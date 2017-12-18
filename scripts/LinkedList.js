@@ -15,6 +15,8 @@ export default class LinkedList {
   }
 
   shift() {
+    this.length--;
+
     if (!this.head) {
       return null;
     } else {
